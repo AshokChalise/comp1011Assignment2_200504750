@@ -3,6 +3,6 @@ module com.example.scrabble {
     requires javafx.fxml;
 
 
-    opens com.example.scrabble to javafx.fxml;
-    exports com.example.scrabble;
+    opens georgian200504750 to javafx.fxml;
+    exports georgian200504750;
 }

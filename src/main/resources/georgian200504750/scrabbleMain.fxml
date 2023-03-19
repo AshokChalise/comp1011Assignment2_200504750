@@ -1,16 +1,202 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.scrabble.scrabbleMainController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
-
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<AnchorPane prefHeight="750.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="georgian200504750.scrabbleMainController">
+    <Button layoutX="520.0" layoutY="686.0" mnemonicParsing="false" onAction="#Exit" text="Exit" />
+    <Hyperlink layoutX="38.0" layoutY="687.0" onAction="#PrevWordsPage" text="Previous Word" />
+    <Hyperlink layoutX="251.0" layoutY="687.0" onAction="#RulePage" text="Rules" />
+    <Button layoutX="175.0" layoutY="90.0" mnemonicParsing="false" onAction="#SubmitWord" text="Submit">
+        <font>
+            <Font name="Cambria Bold" size="15.0" />
+        </font>
+    </Button>
+    <TextField fx:id="word" layoutX="38.0" layoutY="89.0" prefHeight="31.0" prefWidth="121.0" promptText="Enter word">
+        <font>
+            <Font name="Cambria Bold Italic" size="15.0" />
+        </font>
+    </TextField>
+    <Label fx:id="status" layoutX="38.0" layoutY="49.0" prefHeight="31.0" prefWidth="229.0" />
+    <Label fx:id="error" layoutX="38.0" layoutY="130.0" prefHeight="31.0" prefWidth="321.0" textFill="RED" />
+    <Button layoutX="383.0" layoutY="682.0" mnemonicParsing="false" onAction="#Reset" text="Reset">
+        <font>
+            <Font name="Cambria Bold Italic" size="18.0" />
+        </font>
+    </Button>
+    <Label layoutX="299.0" layoutY="644.0" prefHeight="29.0" prefWidth="98.0" text="Total Points" />
+    <Label fx:id="totalPoints" layoutX="424.0" layoutY="644.0" prefHeight="29.0" prefWidth="54.0" text="0">
+        <font>
+            <Font name="System Bold" size="15.0" />
+        </font>
+    </Label>
+    <Button fx:id="button" layoutX="124.0" layoutY="167.0" mnemonicParsing="false" text="A">
+        <font>
+            <Font size="19.0" />
+        </font>
+    </Button>
+    <Button layoutX="198.0" layoutY="167.0" mnemonicParsing="false" text="B">
+        <font>
+            <Font size="19.0" />
+        </font>
+    </Button>
+    <Button layoutX="269.0" layoutY="167.0" mnemonicParsing="false" prefWidth="35.0" text="C">
+        <font>
+            <Font size="19.0" />
+        </font>
+    </Button>
+    <Button layoutX="50.0" layoutY="242.0" mnemonicParsing="false" prefWidth="35.0" text="E">
+        <font>
+            <Font size="19.0" />
+        </font>
+    </Button>
+    <Button layoutX="348.0" layoutY="167.0" mnemonicParsing="false" text="D">
+        <font>
+            <Font size="19.0" />
+        </font>
+    </Button>
+    <Button layoutX="126.0" layoutY="242.0" mnemonicParsing="false" text="F">
+        <font>
+            <Font size="19.0" />
+        </font>
+    </Button>
+    <Button layoutX="201.0" layoutY="242.0" mnemonicParsing="false" text="G">
+        <font>
+            <Font size="19.0" />
+        </font>
+    </Button>
+    <Button layoutX="271.0" layoutY="242.0" mnemonicParsing="false" text="H">
+        <font>
+            <Font size="19.0" />
+        </font>
+    </Button>
+    <Button layoutX="349.0" layoutY="242.0" mnemonicParsing="false" text="I">
+        <font>
+            <Font size="19.0" />
+        </font>
+    </Button>
+    <Button layoutX="417.0" layoutY="242.0" mnemonicParsing="false" text="J">
+        <font>
+            <Font size="19.0" />
+        </font>
+    </Button>
+    <Button layoutX="51.0" layoutY="320.0" mnemonicParsing="false" text="K">
+        <font>
+            <Font size="19.0" />
+        </font>
+    </Button>
+    <Button layoutX="128.0" layoutY="320.0" mnemonicParsing="false" text="L">
+        <font>
+            <Font size="19.0" />
+        </font>
+    </Button>
+    <Button layoutX="199.0" layoutY="320.0" mnemonicParsing="false" text="M">
+        <font>
+            <Font size="19.0" />
+        </font>
+    </Button>
+    <Button layoutX="268.0" layoutY="320.0" mnemonicParsing="false" text="N">
+        <font>
+            <Font size="19.0" />
+        </font>
+    </Button>
+    <Button layoutX="345.0" layoutY="320.0" mnemonicParsing="false" text="O">
+        <font>
+            <Font size="19.0" />
+        </font>
+    </Button>
+    <Button layoutX="415.0" layoutY="320.0" mnemonicParsing="false" text="P">
+        <font>
+            <Font size="19.0" />
+        </font>
+    </Button>
+    <Button layoutX="47.0" layoutY="395.0" mnemonicParsing="false" text="Q">
+        <font>
+            <Font size="19.0" />
+        </font>
+    </Button>
+    <Button layoutX="127.0" layoutY="395.0" mnemonicParsing="false" text="R">
+        <font>
+            <Font size="19.0" />
+        </font>
+    </Button>
+    <Button layoutX="198.0" layoutY="395.0" mnemonicParsing="false" text="S">
+        <font>
+            <Font size="19.0" />
+        </font>
+    </Button>
+    <Button layoutX="270.0" layoutY="395.0" mnemonicParsing="false" text="T">
+        <font>
+            <Font size="19.0" />
+        </font>
+    </Button>
+    <Button layoutX="346.0" layoutY="395.0" mnemonicParsing="false" text="U">
+        <font>
+            <Font size="19.0" />
+        </font>
+    </Button>
+    <Button layoutX="415.0" layoutY="395.0" mnemonicParsing="false" text="V">
+        <font>
+            <Font size="19.0" />
+        </font>
+    </Button>
+    <Button layoutX="122.0" layoutY="469.0" mnemonicParsing="false" text="W">
+        <font>
+            <Font size="19.0" />
+        </font>
+    </Button>
+    <Button layoutX="199.0" layoutY="469.0" mnemonicParsing="false" text="X">
+        <font>
+            <Font size="19.0" />
+        </font>
+    </Button>
+    <Button layoutX="273.0" layoutY="469.0" mnemonicParsing="false" text="Y">
+        <font>
+            <Font size="19.0" />
+        </font>
+    </Button>
+    <Button layoutX="350.0" layoutY="469.0" mnemonicParsing="false" text="Z">
+        <font>
+            <Font size="19.0" />
+        </font>
+    </Button>
+    <Text layoutX="140.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" />
+    <Text layoutX="210.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" />
+    <Text layoutX="285.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" />
+    <Text layoutX="365.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2" />
+    <Text layoutX="64.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" />
+    <Text layoutX="140.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4" />
+    <Text layoutX="218.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2" />
+    <Text layoutX="288.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4" />
+    <Text layoutX="365.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" />
+    <Text layoutX="430.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="8" />
+    <Text layoutX="57.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5" />
+    <Text layoutX="132.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" />
+    <Text layoutX="213.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" />
+    <Text layoutX="283.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" />
+    <Text layoutX="360.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" />
+    <Text layoutX="422.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" />
+    <Text layoutX="57.0" layoutY="455.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10" />
+    <Text layoutX="134.0" layoutY="455.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" />
+    <Text layoutX="213.0" layoutY="455.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" />
+    <Text layoutX="289.0" layoutY="447.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" />
+    <Text layoutX="360.0" layoutY="455.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" />
+    <Text layoutX="433.0" layoutY="455.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4" />
+    <Text layoutX="135.0" layoutY="530.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4" />
+    <Text layoutX="210.0" layoutY="530.0" strokeType="OUTSIDE" strokeWidth="0.0" text="8" />
+    <Text layoutX="283.0" layoutY="530.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4" />
+    <Text layoutX="360.0" layoutY="530.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10" />
+    <ScrollPane layoutX="475.0" layoutY="151.0" prefHeight="395.0" prefWidth="111.0" />
+    <ListView fx:id="pointList" editable="true" layoutX="476.0" layoutY="152.0" prefHeight="393.0" prefWidth="111.0" />
+    <Label layoutX="179.0" layoutY="15.0" prefHeight="34.0" prefWidth="243.0" text="Scrabble Points Generator">
+        <font>
+            <Font size="21.0" />
+        </font>
+    </Label>
+    <Label layoutX="483.0" layoutY="111.0" prefHeight="34.0" prefWidth="98.0" text="Points in bag">
+        <font>
+            <Font size="17.0" />
+        </font>
+    </Label>
+</AnchorPane>
